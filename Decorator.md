@@ -1,5 +1,5 @@
 # Ian e Fábio - Decorator
 
-```Rust
-println("Olá mundo");
+```C#
+Console.WriteLine("Hello world');
 ```
