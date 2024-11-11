@@ -1,5 +1,5 @@
 # Ian e Fábio - Decorator
 
-```Cython
-printf('Hello world')
+```Java
+System.out.println("Olá mundo");
 ```
