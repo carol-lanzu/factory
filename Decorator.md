@@ -1,5 +1,6 @@
 # Ian e Fábio - Decorator
 
-```C
+```
+C
 printf('Hello world')
 ```
