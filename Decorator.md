@@ -1,5 +1,5 @@
 # Ian e Fábio - Decorator
 
-```C++
+```Cython
 printf('Hello world')
 ```
