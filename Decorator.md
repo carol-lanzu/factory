@@ -1,5 +1,5 @@
 # Ian e Fábio - Decorator
 
 ```C#
-Console.WriteLine("Hello world');
+Console.log("Hello world');
 ```
