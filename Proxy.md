@@ -6,7 +6,7 @@
 
 O Proxy é um padrão de projeto estrutural que atua como um intermediário ou substituto para outro objeto. Ele oferece uma camada adicional de controle, permitindo gerenciar o acesso ao objeto real (chamado de RealSubject). O Proxy é usado para adicionar comportamentos ou condições sem alterar o código do objeto real.
 
-###Problemas que o padrao de projeto Proxy resolve:
+### Problemas que o padrao de projeto Proxy resolve:
 O padrão de projeto Proxy resolve problemas como controle de acesso, desempenho e monitoramento, atuando como uma camada intermediária entre o cliente e o objeto real. Ele é útil para restringir acessos (Protection Proxy), como em sistemas que permitem apenas administradores visualizar relatórios confidenciais, ou para carregar recursos sob demanda (Virtual Proxy), adiando a criação de objetos pesados até serem necessários, como imagens em uma interface gráfica.
 
 Além disso, o Proxy pode armazenar em cache resultados para evitar recalcular ou recarregar objetos, e pode registrar atividades para auditoria ou monitoramento de desempenho. Em sistemas distribuídos, ele facilita a comunicação remota (Remote Proxy), escondendo a complexidade de conexões de rede.
