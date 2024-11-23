@@ -103,3 +103,14 @@ Extende a Abstraction e implementa detalhes adicionais.
 Define a interface para todas as implementações.
 #### ConcreteImplementor: 
 Implementa a interface Implementor.
+## Conclusão
+
+O código implementa o padrão de projeto Bridge de forma clara e eficiente, demonstrando sua capacidade de desacoplar abstrações de implementações. Esse desacoplamento permite que ambas evoluam de forma independente, resultando em um sistema mais flexível, extensível e fácil de manter.
+
+
+Através da separação entre formas geométricas (abstração) e plataformas de renderização (implementação), o código evita a explosão combinatória de subclasses que poderia ocorrer com uma abordagem baseada apenas em herança. Além disso, o uso de delegação garante que as abstrações (como Circle) não dependam diretamente das implementações concretas (SVGRenderer, CanvasRenderer), promovendo modularidade. Essa flexibilidade faz do Bridge uma solução ideal para sistemas que precisam combinar múltiplas abstrações e implementações, mantendo o código limpo, reutilizável e preparado para mudanças futuras.
+## Referências
+
+Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. Padrão do projeto “Soluções reutilizáveis de software orientado a objetos”. 2007
+
+[Link do texto de apoio](https://refactoring.guru/pt-br/design-patterns/bridge)
