@@ -1,20 +1,20 @@
 # Ebenezer & André
 # Padrão de Projeto Bridge
-### O que é?
+### O que é Bridge?
 O padrão de projeto Bridge é um padrão estrutural que tem como objetivo desacoplar uma abstração da sua implementação, de modo que ambas possam evoluir de forma independente. Em outras palavras, ele separa a interface (abstração) de um sistema da sua implementação, permitindo que você altere uma sem impactar a outra.
 ### Problema que o padrão de projeto objetiva resolver:
 O padrão Bridge busca solucionar o problema de rigidez e acoplamento excessivo entre uma abstração e sua implementação. Frequentemente, ao utilizar herança para estender funcionalidades, criamos um vínculo permanente entre as classes abstratas e suas implementações concretas. Isso torna o sistema menos flexível, dificultando a extensão de funcionalidades ou a portabilidade para outras plataformas, especialmente quando há múltiplas implementações possíveis para a mesma abstração. Um exemplo típico é o desenvolvimento de interfaces gráficas que precisam ser compatíveis com diferentes sistemas de janelas (como XWindow e PMWindow). A abordagem convencional de herança resultaria em uma explosão combinatória de subclasses para suportar todas as variações necessárias.
 ### Solução proposta pelo Bridge:
 O Bridge propõe separar uma abstração de suas implementações, permitindo que ambas possam variar de forma independente. Isso é alcançado dividindo a hierarquia de classes em duas partes: uma para a abstração e outra para a implementação. A classe abstrata mantém uma referência a um objeto que implementa a interface necessária, possibilitando que a implementação seja alterada em tempo de execução sem impactar a abstração. Assim, o padrão permite a combinação flexível de diferentes abstrações e implementações, aumentando a extensibilidade e portabilidade do sistema.
 ### Código Fonte de um sistema que desenhar Formas em Diferentes APIs Gráficas:
-Image
+Interface Implementor Image
 
       class Renderer {
        public:
         virtual void drawCircle(float x, float y, float radius) = 0;
         virtual ~Renderer() = default;
       };
-Interface Implementor Image
+ Implementação concreta para SVG Image
 
         class SVGRenderer : public Renderer {
          public:
@@ -53,7 +53,7 @@ Abstração Image
        renderer->drawCircle(x, y, radius);
        }
       };
-Padrão Bridge Pattern
+Uso do padrão Bridge Pattern
 
 
        int main() {
@@ -85,10 +85,21 @@ Contém uma referência a um objeto Renderer, que será usado para delegar a ló
 ### Abstração Refinada
 Circle é uma implementação concreta de Shape que fornece a lógica específica para uma forma geométrica (um círculo).
 Mantém atributos específicos da forma (posição e tamanho do círculo) e utiliza a referência ao Renderer para delegar a renderização. As formas geométricas são separadas das plataformas de renderização, promovendo flexibilidade e reutilização.
-### No programa principal
+###  Uso no main
 Implementadores são criados: SVGRenderer e CanvasRenderer são instâncias de plataformas de renderização.
 Formas são criadas através de Circle que é instanciado e configurado para usar uma plataforma de renderização específica.
 Delegação de renderização é feita quando draw é chamado em Circle, a lógica de renderização é delegada ao implementador correspondente. A combinação de diferentes formas geométricas com diferentes plataformas de renderização é feita sem modificar nenhuma classe existente.
 
 ## Diagrama de Classes
+Imagem de estrutura do padrão bridge:
 
+![Bridge](https://github.com/user-attachments/assets/0595fb50-758d-48bf-b28e-130eca8ed8ad)
+
+#### Abstraction: 
+Define a interface de alto nível e mantém uma referência ao objeto Implementor.
+#### RefinedAbstraction: 
+Extende a Abstraction e implementa detalhes adicionais.
+#### Implementor: 
+Define a interface para todas as implementações.
+#### ConcreteImplementor: 
+Implementa a interface Implementor.
