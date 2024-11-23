@@ -14,5 +14,6 @@ Por meio do pensamento de padrão de projeto Factory, propõem-se:
 - Uso da fábrica: No cotidiano do restaurante, eles irão preparam as comidas conforme o pedido dos clientes se moldando na receita específica hora taco, hora nachos.
 
 Sendo assim, apresenta-se o ideia de existir um método fábrica que realizará a criação de novos pratos ao menu, como burritos ou quesadillas, sem a necessidade de reestruturar o processo do restaurante. Isso é possível por meio de um planejamento mais genérico do negócio no ramo de comidas mexicanas e com seus pratos, como uma grande fábrica. Assim, a ampliação do menu torna-se mais fácil e flexível.
+
 Logo, o padrão Factory visa solucionar o problema de crescimento e diversificação do menu do restaurante, proporcionando uma maneira organizada e escalável de gerenciar a criação e adição de novos pratos ao menu.
 
