@@ -7,14 +7,14 @@ O padrão Bridge busca solucionar o problema de rigidez e acoplamento excessivo 
 ### Solução proposta pelo Bridge:
 O Bridge propõe separar uma abstração de suas implementações, permitindo que ambas possam variar de forma independente. Isso é alcançado dividindo a hierarquia de classes em duas partes: uma para a abstração e outra para a implementação. A classe abstrata mantém uma referência a um objeto que implementa a interface necessária, possibilitando que a implementação seja alterada em tempo de execução sem impactar a abstração. Assim, o padrão permite a combinação flexível de diferentes abstrações e implementações, aumentando a extensibilidade e portabilidade do sistema.
 ### Código Fonte de um sistema que desenhar Formas em Diferentes APIs Gráficas:
-Interface Implementor Image
+Interface Implementor 
 
       class Renderer {
        public:
         virtual void drawCircle(float x, float y, float radius) = 0;
         virtual ~Renderer() = default;
       };
- Implementação concreta para SVG Image
+ Implementação concreta para SVG 
 
         class SVGRenderer : public Renderer {
          public:
@@ -30,7 +30,7 @@ Interface Implementor Image
         std::cout << "Desenhando círculo em Canvas no centro (" << x << ", " << y << ") com raio " << radius << ".\n";
         }
        };
-Abstração Image
+Abstração 
 
 
        class Shape {
@@ -53,7 +53,7 @@ Abstração Image
        renderer->drawCircle(x, y, radius);
        }
       };
-Uso do padrão Bridge Pattern
+Uso do padrão Bridge 
 
 
        int main() {
@@ -68,7 +68,7 @@ Uso do padrão Bridge Pattern
     
        return 0;
       }
-Saída Esperada Pattern
+Saída Esperada 
 
       Desenhando círculo em SVG no centro (10, 10) com raio 5.
       Desenhando círculo em Canvas no centro (20, 20) com raio 10.
